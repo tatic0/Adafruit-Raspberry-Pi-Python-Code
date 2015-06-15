@@ -1,0 +1,15 @@
+#!/bin/bash
+
+#
+# fake executable for test testing purposes
+#
+
+function fakesensor {
+echo "Using pin #4
+Data (40): 0x1 0xf4 0x0 0xf1 0xe6
+Temp =  24.1 *C, Hum = 50.0 %
+"
+}
+
+randsec=`shuf -i 1-5 -n 1`
+sleep $randsec; fakesensor
