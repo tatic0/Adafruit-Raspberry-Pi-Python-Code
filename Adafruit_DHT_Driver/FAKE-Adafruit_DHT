@@ -5,9 +5,13 @@
 #
 
 function fakesensor {
+faketemp=`shuf -i 0-32 -n 1`
+fakefloat1=`shuf -i 0-9 -n 1`
+fakefloat2=`shuf -i 0-9 -n 1`
+fakehum=`shuf -i 20-75 -n 1`
 echo "Using pin #4
 Data (40): 0x1 0xf4 0x0 0xf1 0xe6
-Temp =  24.1 *C, Hum = 50.0 %
+Temp =  $faketemp.$fakefloat1 *C, Hum = $fakehum.$fakefloat2 %
 "
 }
 
